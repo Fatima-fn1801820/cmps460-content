@@ -8,6 +8,7 @@ __pycache__/
 
 # explore folder
 explore/
+prep/
 
 # Distribution / packaging
 .Python
