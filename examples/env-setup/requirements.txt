@@ -1,27 +1,52 @@
-# Core Data Science
-numpy>=2.4.2
-pandas>=3.0.0
-scipy>=1.17.0
+## Core Data Science
 
-# Visualization
+numpy>=2.4.4
+pandas>=3.0.2
+scipy>=1.17.1
+
+## Visualization
+
 matplotlib>=3.10.8
 seaborn>=0.13.2
 graphviz>=0.21
 
-# Machine Learning
+## Machine Learning
+
 scikit-learn>=1.8.0
-xgboost>=3.1.3
+xgboost>=3.2.0
 
-# Deep Learning (PyTorch)
-torch>=2.10.0
-torchvision>=0.25.0
+## Deep Learning (PyTorch)
 
-# Interactive / Jupyter
-jupyterlab>=4.5.3
+torch>=2.11.0
+torchvision>=0.26.0
+
+## Interactive / Jupyter (Modern Interface)
+
+jupyterlab>=4.5.6          # Modern Jupyter UI
+notebook>=7.4.0            # Classic notebook (Lab-based)
+jupyter-server>=2.15.0
+
 ipykernel>=7.2.0
 ipywidgets>=8.1.8
+jupyterlab-widgets>=3.1.8
+
+nbconvert>=7.16.0
+nbformat>=5.10.4
 tqdm>=4.67.3
 
-# Utilities
-requests>=2.32.5
-pillow>=12.1.0
+## JupyterLab Extensions
+
+jupyterlab-git>=0.50.0     # Git integration (UI + diff, commit, push)
+jupyterlab-toc>=6.1.0      # Table of Contents sidebar
+jupyterlab-lsp>=5.1.0      # Language Server Protocol support
+
+## LSP Language Servers (Python)
+
+python-lsp-server>=1.11.0  # Python IntelliSense, hover, completion
+python-lsp-black>=2.0.0    # Black formatting
+python-lsp-ruff>=2.0.0     # Ruff linting (fast, modern)
+
+## Utilities
+
+requests>=2.33.1
+pillow>=12.2.0
