@@ -10,6 +10,8 @@ __pycache__/
 # explore folder
 explore/
 prep/
+*.endpointdlp
+*.Identifier
 
 # Distribution / packaging
 .Python
