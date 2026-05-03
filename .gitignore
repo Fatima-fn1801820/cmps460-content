@@ -10,6 +10,13 @@ __pycache__/
 # explore folder
 explore/
 prep/
+*.endpointdlp
+*.Identifier
+old-*
+mnist/
+*.tgz
+*.pt
+.jupyter_tmp/
 
 # Distribution / packaging
 .Python

@@ -7,6 +7,7 @@ The recommended way to run notebooks for this course is using **Google Colab in 
 This option gives you the power of cloud computing ☁️ with the convenience of your local editor 💻.
 
 1.  **Install Extensions:** In VS Code, install the following extensions:
+    *   **Python** (by Microsoft)
     *   **Jupyter** (by Microsoft)
     *   **Google Colab** (by Google)
 2.  **Open Notebook:** Open your `.ipynb` file.
@@ -22,7 +23,7 @@ You can also run notebooks directly in your browser without VS Code.
 2.  **Upload** your notebook (`.ipynb` file).
 3.  **Install Libraries:** Libraries are pre-installed in Colab. If you need to install libraries, add and run this code cell at the top of your notebook:
     ```python
-    !pip install -r https://raw.githubusercontent.com/cmps460s26/cmps460-content/refs/heads/main/examples/env-setup/requirements.txt
+    !pip install -r https://raw.githubusercontent.com/mls26/ml-content/refs/heads/main/examples/env-setup/requirements.txt
     ```
 
 ---
@@ -36,23 +37,47 @@ Download and install the latest Python from [python.org](https://www.python.org/
 *   **Important:** Check the box **"Add Python to path"** during installation.
 
 ### 2. Setup Environment
-Open your terminal (PowerShell/Command Prompt/Terminal) in the folder containing `requirements.txt` and run:
 
-```bash
-# 1. Create Virtual Environment
-python -m venv cmps460-env       # Windows
-python3 -m venv cmps460-env      # macOS/Linux
+## Prerequisites (All Platforms)
 
-# 2. Activate Environment
-cmps460-env\Scripts\activate     # Windows
-source cmps460-env/bin/activate  # macOS/Linux
+- Python **3.10+** installed
+- `requirements.txt` file available
+- Setup scripts included in the project:
+  - `setup-env.ps1` for Windows
+  - `setup-env.sh` for macOS / Linux
 
-# 3. Install Libraries
-pip install -r requirements.txt
-```
+## Windows Setup
+
+### Step 1: Open the terminal
+- Navigate to the folder containing `setup-env.ps1`
+- Open a terminal in that folder
+
+### Step 2: Allow script execution (one time only)
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+### Step 3: Run the setup script
+.\setup-env.ps1
+
+- Virtual environment is created at:
+C:\Users<username>.venvs\ml-env
+
+## macOS / Linux Setup
+
+### Step 1: Open the terminal
+- Navigate to the folder containing `setup-env.sh`
+
+### Step 2: Make the script executable (one time only)
+chmod +x setup-env.sh
+
+### Step 3: Run the setup script
+./setup-env.sh
+
+- Virtual environment is created at:
+~/.venvs/ml-env
+
 
 ### 3. Run Notebooks
-*   **VS Code:** Install the **Jupyter** extension. Open a `.ipynb` file, click **Select Kernel** > **Python Environments** > `cmps460-env`.
+*   **VS Code:** Install the **Jupyter** extension. Open a `.ipynb` file, click **Select Kernel** > **Python Environments** > `ml-env`.
 *   **Browser:** Run `jupyter lab` in your activated terminal.
 
 ---
