@@ -14,8 +14,9 @@ prep/
 *.Identifier
 old-*
 mnist/
-*.tgz
+*.tgz*
 *.pt
+*.pth
 .jupyter_tmp/
 
 # Distribution / packaging
